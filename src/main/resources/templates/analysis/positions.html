@@ -18,14 +18,15 @@
             <table class="customDesign">
               <thead>
               <tr>
-                <th scope="col">AccountNo</th>
-                <th scope="col">Holdings</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Age</th>
+
               </tr>
               </thead>
               <tbody>
-              <tr th:each="account : ${accounts}">
-                <td><span th:text="${account.getAccountNo()}">  </span></td>
-                <a th:href="@{/holdings/{accountId}(accountId=${account.getAccountNo})}" class="btn btn-primary">Add Cart<i></i></a> <!-- todo a href with two variables-->
+              <tr th:each="position : ${positions}">
+                <td><span th:text="${position.getAmount()}">  </span></td>
+                <td><span th:text="${position.getTimeStamp()}">  </span></td>
               </tr>
               </tbody>
             </table>

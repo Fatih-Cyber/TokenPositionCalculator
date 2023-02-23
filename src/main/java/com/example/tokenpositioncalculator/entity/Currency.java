@@ -1,11 +1,12 @@
 package com.example.tokenpositioncalculator.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Getter
 @Setter
@@ -15,9 +16,9 @@ import lombok.Setter;
 public class Currency extends BaseEntity{
 
     @Column(unique = true)
-    String code;
+    private String code;
     @Column(unique = true)
-    String name;
+    private String name;
     private boolean isBaseCurrency;
 
 }

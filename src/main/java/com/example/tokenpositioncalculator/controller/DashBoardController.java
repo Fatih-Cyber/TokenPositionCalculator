@@ -1,13 +1,15 @@
 package com.example.tokenpositioncalculator.controller;
 
-import com.example.tokenanalysis.service.CsvService;
-import com.example.tokenanalysis.service.GetTransactionsFromCsv;
+import com.example.tokenpositioncalculator.dto.AccountDTO;
 import com.example.tokenpositioncalculator.service.AccountService;
 import com.example.tokenpositioncalculator.service.PositionBuiderService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
+
 @AllArgsConstructor
 @Controller
 public class DashBoardController {
@@ -16,10 +18,12 @@ public class DashBoardController {
 
 
     @GetMapping("/analysis/dashboard")
-public String showDashboard(Model model){
-        positionBuiderService.buildPositionsFromCsv("/Users/iceman/Desktop/CSVs/CsvFinal.csv").
-       model.addAttribute("transactions", );
-    return "/analysis/dashboard";
-}
+    public String showDashboard(Model model) {
+        positionBuiderService.buildPositionsFromCsv("/Users/ismailyildirim/Desktop/CsvFinal.csv");
+        List<AccountDTO> accountDTOList = accountService.findAll();
+
+        model.addAttribute("accounts", accountDTOList);
+        return "/analysis/dashboard";
+    }
 
 }

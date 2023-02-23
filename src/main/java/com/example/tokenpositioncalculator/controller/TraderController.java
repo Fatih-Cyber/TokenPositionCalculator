@@ -1,9 +1,5 @@
 package com.example.tokenpositioncalculator.controller;
 
-import com.example.tokenanalysis.DTO.TraderDTO;
-import com.example.tokenanalysis.service.TraderService;
-import com.example.tokenanalysis.service.WalletService;
-import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/trader")
 public class TraderController {
+    /*
     private final TraderService traderService;
     private final WalletService walletService;
 
@@ -40,7 +37,8 @@ public class TraderController {
             return "/trader/create";
         }*/
 
-        traderService.save(trader);
-        return "redirect:/trader/create";
-    }
+        //traderService.save(trader);
+        //return "redirect:/trader/create";
+    //}
+
 }

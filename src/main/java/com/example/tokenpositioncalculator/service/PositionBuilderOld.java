@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class PositionBuilderOld {
+    /*
     public static HashMap<String,LinkedList<Position>> buildPositionsFromCsv(String fileName){
           List<CsvTx> trx=CsvReader.readTransactionsCsv(fileName);
         HashMap<String,LinkedList<Position>> result=new HashMap<>();
@@ -25,4 +26,6 @@ public class PositionBuilderOld {
         }
           return result;
     }
+
+     */
  }

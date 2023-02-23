@@ -2,9 +2,6 @@ package com.example.tokenpositioncalculator.dto;
 
 import com.example.tokenpositioncalculator.entity.Account;
 import com.example.tokenpositioncalculator.entity.Currency;
-import com.example.tokenpositioncalculator.entity.Position;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

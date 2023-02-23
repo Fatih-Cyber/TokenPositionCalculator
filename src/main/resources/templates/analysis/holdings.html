@@ -19,13 +19,20 @@
               <thead>
               <tr>
                 <th scope="col">AccountNo</th>
-                <th scope="col">Holdings</th>
+                <th scope="col">CurrencyCode</th>
+                <th scope="col">CurrencyName</th>
+                <th scope="col">Total Value</th>
+                <th scope="col">Positions</th>
               </tr>
               </thead>
               <tbody>
-              <tr th:each="account : ${accounts}">
-                <td><span th:text="${account.getAccountNo()}">  </span></td>
-                <a th:href="@{/holdings/{accountId}(accountId=${account.getAccountNo})}" class="btn btn-primary">Add Cart<i></i></a> <!-- todo a href with two variables-->
+              <tr th:each="holding : ${holdings}">
+                <td><span th:text="${holding.getAccountNo()}">  </span></td>
+                <td><span th:text="${holding.getCurrency().getCode()}">  </span></td>
+                <td><span th:text="${holding.getCurrency().getName()()}">  </span></td>
+                <td><span th:text="${holding.getTotalValue()}">  </span></td>
+                <a th:href="@{/positions/{holdingId}(holdingId=${holding.getId()})}" class="btn btn-primary">Add Cart<i></i></a> <!-- todo a href with two variables-->
+
               </tr>
               </tbody>
             </table>
